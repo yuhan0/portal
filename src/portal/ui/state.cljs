@@ -48,9 +48,9 @@
 
 (defn deselect-context
   [state context multi?]
-  (if-not multi?
-    (dissoc state :selected)
-    (update state :selected #(into [] (remove #{context}) %))))
+  (if multi?
+    (update state :selected #(into [] (remove #{context}) %))
+    state))
 
 (defn selected [state context]
   (some (fn [[index context']]
