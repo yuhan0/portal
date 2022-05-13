@@ -317,7 +317,7 @@
        {:style
         {:color (::c/diff-remove theme)}}
        open
-       (count value)
+       "..." [:sub (count value)]
        close])))
 
 (def ^:private preview-map    (preview-coll "{" "}"))
