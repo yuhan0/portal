@@ -788,7 +788,7 @@
              context
              (or (.-metaKey e) (.-altKey e)))
             (.stopPropagation e))
-          :on-double-click
+          #_#_:on-double-click
           (fn [e]
             (state/dispatch! state state/nav context)
             (.stopPropagation e))})
