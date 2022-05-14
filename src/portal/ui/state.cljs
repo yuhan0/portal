@@ -169,7 +169,7 @@
   (if-let [child (or (select/get-right context)
                      (select/get-child context))]
     (select-context state child)
-    state))
+    (toggle-expand state)))
 
 (defn get-path [state]
   (when-let [{:keys [key? path value]} (get-selected-context state)]
