@@ -754,7 +754,7 @@
                   (not= (.. js/document -activeElement -tagName) "INPUT"))
          (when-let [el (.-current ref)]
            (when-not (l/element-visible? el)
-             (.scrollIntoView el #js {:inline "nearest" :behavior "smooth"})))))
+             (.scrollIntoView el #js {:inline "nearest" :behavior "instant"})))))
      #js [selected (.-current ref)])
     [with-context
      context
